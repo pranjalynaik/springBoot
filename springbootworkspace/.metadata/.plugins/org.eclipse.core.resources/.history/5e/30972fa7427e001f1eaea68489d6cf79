@@ -1,0 +1,7 @@
+package com.prowin.clinic.repository;
+
+import com.prowin.clinic.model.Patient;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PatientRepository extends JpaRepository<Patient, Long> {
+}

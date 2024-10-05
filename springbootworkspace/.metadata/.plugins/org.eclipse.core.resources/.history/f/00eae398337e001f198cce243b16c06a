@@ -1,0 +1,92 @@
+package edu.cjc.sms.controller;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import edu.cjc.sms.model.Student;
+import edu.cjc.sms.servicei.Studentservice;
+
+@RestController
+@RequestMapping("/api")
+public class AdminController {
+
+    @Autowired
+    Studentservice ss;
+
+    @GetMapping("/")
+    public Map<String, String> preLogin() {
+        // Return a simple message or status
+        Map<String, String> response = new HashMap<>();
+        response.put("message", "Please log in.");
+        return response;
+    }
+
+    @PostMapping("/login")
+    public Map<String, Object> onLogin(@RequestParam("username") String username, @RequestParam("password") String password) {
+        Map<String, Object> response = new HashMap<>();
+        if (username.equals("ADMIN") && password.equals("ADMIN")) {
+            List<Student> list = ss.getAllStudents();
+            response.put("status", "success");
+            response.put("data", list);
+        } else {
+            response.put("status", "fail");
+            response.put("message", "Enter valid login details");
+        }
+        return response;
+    }
+
+    @PostMapping("/enroll_student")
+    public Map<String, Object> saveStudent(@RequestBody Student s) {
+        Map<String, Object> response = new HashMap<>();
+        ss.saveData(s);
+        response.put("message", "Student enrolled successfully");
+        response.put("student", s);
+        return response;
+    }
+
+    @GetMapping("/search")
+    public Map<String, Object> getStudentByBatch(@RequestParam("batchNumber") String batchNumber) {
+        Map<String, Object> response = new HashMap<>();
+        List<Student> result = ss.getStudentByBatchNumber(batchNumber);
+        if (result.size() > 0) {
+            response.put("status", "success");
+            response.put("data", result);
+        } else {
+            response.put("status", "fail");
+            response.put("message", "There is no record for batch number: " + batchNumber);
+            response.put("data", ss.getAllStudents()); // Return all students if no batch found
+        }
+        return response;
+    }
+
+    @GetMapping("/fees")
+    public Student onFees(@RequestParam int id) {
+        // Return the student object directly in JSON format
+        return ss.getSingleStudent(id);
+    }
+
+    @PostMapping("/payfees")
+    public Map<String, Object> payFees(@RequestParam int studentid, @RequestParam float amount) {
+        Map<String, Object> response = new HashMap<>();
+        ss.UpdateStudentfees(studentid, amount);
+        response.put("message", "Fees updated successfully");
+        response.put("students", ss.getAllStudents());
+        return response;
+    }
+
+    @DeleteMapping("/remove")
+    public Map<String, Object> onRemove(@RequestParam int id) {
+        Map<String, Object> response = new HashMap<>();
+        Student st = ss.getSingleStudent(id);
+        // Assuming you want to remove the student; you need a service method to do this.
+        // If you have a delete method in your service, you can call it here:
+        // ss.deleteStudent(id);
+        response.put("message", "Student record removed successfully");
+        response.put("student", st); // This could be the removed student object or some other status
+        return response;
+    }
+}

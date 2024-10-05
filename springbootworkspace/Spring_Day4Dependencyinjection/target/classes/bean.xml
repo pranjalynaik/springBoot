@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd" >
+  
+  
+   <bean id="a" class="com.modelSetterInjection.Address"  >
+  <property name="areaname"  value="karvenagar"></property>
+  </bean>
+  
+  <bean id="s" class="com.modelSetterInjection.Student" > 
+  <property  name="rollno"  value="1" ></property>
+  <property name="adr" ref="a"></property>
+  <property name="names">
+    <list>
+    <value>ABC</value>
+    <value>XYZ</value>
+    </list>
+    </property>
+    <property name="country">
+    <map> 
+    <entry key="INDIA"  value="+91"> </entry>
+    <entry key="Malaysia"  value="+60" > </entry>
+    
+    </map>
+      </property>
+  </bean>
+ 
+ </beans>

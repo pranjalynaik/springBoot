@@ -1,0 +1,26 @@
+
+Sep 29, 2024 11:22:40.90 NEW SESSION
+Sep 29, 2024 11:22:40.94 Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 29, 2024 11:25:00.45 Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 29, 2024 11:25:54.88 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+
+Sep 29, 2024 12:04:30.20 NEW SESSION
+Sep 29, 2024 12:04:30.21 Created TensorFlow Lite XNNPACK delegate for CPU.
+Sep 29, 2024 12:04:56.73 Attempting to use a delegate that only supports static-sized tensors with a graph that has dynamic-sized tensors (tensor#58 is a dynamic-sized tensor).
+Sep 29, 2024 12:15:41.46 [16148:4568:0929/121541.463:ERROR:interface_endpoint_client.cc(725)] Message 0 rejected by interface blink.mojom.WidgetHost
+Sep 29, 2024 12:23:13.59 [16148:2848:0929/122313.597:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Sep 29, 2024 12:23:14.75 [16148:4568:0929/122314.757:ERROR:device_event_log_impl.cc(201)] [12:23:14.756] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Sep 29, 2024 12:35:09.10 [16148:4568:0929/123509.100:ERROR:CONSOLE(1)] "Unknown VE context: word-wrap", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+Sep 29, 2024 12:35:09.15 [16148:4568:0929/123509.154:ERROR:CONSOLE(1)] "Unknown VE context: -webkit-text-size-adjust", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+Sep 29, 2024 12:35:09.57 [16148:4568:0929/123509.574:ERROR:CONSOLE(1)] "Unknown VE context: word-wrap", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+Sep 29, 2024 12:35:09.57 [16148:4568:0929/123509.574:ERROR:CONSOLE(1)] "Unknown VE context: -webkit-text-size-adjust", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+Sep 29, 2024 12:35:10.14 [16148:4568:0929/123510.143:ERROR:CONSOLE(1)] "Unknown VE context: word-wrap", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+Sep 29, 2024 12:35:10.14 [16148:4568:0929/123510.143:ERROR:CONSOLE(1)] "Unknown VE context: -webkit-text-size-adjust", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+Sep 29, 2024 12:36:14.16 [16148:4568:0929/123614.159:ERROR:CONSOLE(1)] "Unknown VE context: word-wrap", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+Sep 29, 2024 12:36:14.21 [16148:4568:0929/123614.214:ERROR:CONSOLE(1)] "Unknown VE context: -webkit-text-size-adjust", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+Sep 29, 2024 12:36:14.39 [16148:4568:0929/123614.392:ERROR:CONSOLE(1)] "Unknown VE context: word-wrap", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+Sep 29, 2024 12:36:14.39 [16148:4568:0929/123614.393:ERROR:CONSOLE(1)] "Unknown VE context: -webkit-text-size-adjust", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+Sep 29, 2024 13:25:14.39 [16148:4568:0929/132514.392:ERROR:device_event_log_impl.cc(201)] [13:25:14.392] USB: usb_service_win.cc:105 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: Element not found. (0x490)
+Sep 29, 2024 13:25:47.89 [16148:2848:0929/132547.892:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Sep 29, 2024 13:25:49.92 [16148:2848:0929/132549.928:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105
+Sep 29, 2024 13:26:11.34 [16148:2848:0929/132611.345:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -105

@@ -1,0 +1,5 @@
+package com.prowin.clinic.controller;
+
+public class PatientController {
+
+}
